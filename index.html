@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>当前num：<span id="count">0</span></div>
+        <button id="sendCount">点我把num交给apk</button>
+    </div>
+    <script>
+        let num = 0
+        let count = document.getElementById("count")
+        let sendCount = document.getElementById("sendCount")
+        sendCount.onclick = function () {
+            window.bridge.sendCount(num)
+        }
+
+        function addnum() {
+            num = num + 1
+            count.innerHTML = num
+            return "增加数字完毕"
+        }
+
+    </script>
+</body>
+</html>
