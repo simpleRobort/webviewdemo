@@ -17,9 +17,10 @@
         <button id="sendCount">点我把num交给apk</button>
     </div>
     <script>
-        let num = 0
-        let count = document.getElementById("count")
-        let sendCount = document.getElementById("sendCount")
+        var num = 0
+        var count = document.getElementById("count")
+        var sendCount = document.getElementById("sendCount")
+        console.log(123);
         sendCount.onclick = function () {
             window.bridge.sendCount(num)
         }
