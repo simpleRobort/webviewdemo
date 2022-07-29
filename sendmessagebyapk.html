@@ -8,13 +8,9 @@
 </head>
 <body>
    <input type="text" id="txt"/>
-   <button id="btn">发送验证码</button>
+ 
    <script>
-    var btn = document.getElementById('btn')
     var txt = document.getElementById('txt')
-    btn.onclick = function () {
-        window.bridge.sendMessage()
-    }
 
     function setMessage(str) {
         txt.value = str
