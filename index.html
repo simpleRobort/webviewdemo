@@ -13,14 +13,13 @@
 </head>
 <body>
     <div class="box">
-        <div>当前num：<span id="count">0</span></div>
+        <!-- <div>当前num：<span id="count">0</span></div> -->
         <button id="sendCount">点我把num交给apk</button>
     </div>
     <script>
         var num = 0
-        var count = document.getElementById("count")
+        // var count = document.getElementById("count")
         var sendCount = document.getElementById("sendCount")
-        console.log(123);
         sendCount.onclick = function () {
             window.bridge.sendCount(num)
         }
